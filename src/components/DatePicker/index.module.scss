@@ -1,0 +1,32 @@
+@import "assets/style/root";
+
+.date-picker {
+  width: 250px;
+  &__input {
+    height: 46px;
+    background: rgba(128, 131, 164, 0.06);
+    border: 2px solid rgba(128, 131, 164, 0.2);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: $strong;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color .3s;
+    cursor: pointer;
+    &::placeholder {
+      color: $secondary;
+    }
+    &:hover {
+      border-color: $secondary;
+    }
+  }
+}
+
+
+@media (max-width: 1400px) {
+  .date-picker {
+    width: 200px;
+  }
+}

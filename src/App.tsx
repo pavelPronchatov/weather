@@ -1,0 +1,23 @@
+// eslint-disable-next-line no-use-before-define
+import React from 'react'
+import TitleMain from './components/TitleMain'
+import WeekDays from 'components/WeekDays'
+
+import './App.scss'
+import DateInPast from 'components/DateInPast'
+
+function App () {
+  return (
+    <div className="App">
+      <div className="container">
+        <TitleMain/>
+        <div className="App__wrapper">
+          <WeekDays/>
+          <DateInPast/>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default App

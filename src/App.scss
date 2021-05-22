@@ -1,0 +1,58 @@
+@import "assets/style/root.scss";
+
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: $strong;
+  line-height: 2rem;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $strong;
+  line-height: 2rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  color: $strong;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $strong;
+  background: $accent url("assets/img/Bg.svg") no-repeat top;
+  background-size: 100%;
+  min-height: 100vh;
+  max-height: max-content;
+  font-family: Ubuntu, serif;
+}
+.container {
+  width: calc(100% - 80px);
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.App__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1280px) {
+  .App__wrapper {
+    flex-direction: column;
+    align-content: center;
+    margin-bottom: 80px;
+  }
+}

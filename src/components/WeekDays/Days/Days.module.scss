@@ -1,0 +1,32 @@
+.days {
+  width: 100%;
+  position: relative;
+  margin-top: 60px;
+  &__list {
+    display: flex;
+  }
+  &__error {
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+  }
+  &__prev,
+  &__next {
+    width: 10px;
+    height: 18px;
+    background: url("../../../assets/img/arrowSlider.svg") no-repeat center;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    outline: none;
+    position: absolute;
+    top: calc(50% - 9px);
+    right: -30px;
+  }
+  &__prev {
+    transform: rotate(-180deg);
+    left: -30px;
+    right: initial;
+  }
+}

@@ -1,0 +1,19 @@
+@import "assets/style/root";
+.city {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 30px;
+  }
+  &__desc {
+    font-size: 16px;
+    font-weight: bold;
+    color: $secondary;
+    margin-bottom: 40px;
+  }
+}
