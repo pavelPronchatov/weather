@@ -5,18 +5,27 @@ import WeekDays from 'components/WeekDays'
 
 import './App.scss'
 import DateInPast from 'components/DateInPast'
+import { WidthProvider } from 'context/resizeContext'
 
 function App () {
+  const breakPoints = {
+    notebook: 1366,
+    tablet: 1200,
+    mobile: 500
+  }
+
   return (
-    <div className="App">
-      <div className="container">
-        <TitleMain/>
-        <div className="App__wrapper">
-          <WeekDays/>
-          <DateInPast/>
+    <WidthProvider breakPoints={breakPoints}>
+      <div className="App">
+        <div className="container">
+          <TitleMain/>
+          <div className="App__wrapper">
+            <WeekDays/>
+            <DateInPast/>
+          </div>
         </div>
       </div>
-    </div>
+    </WidthProvider>
   )
 }
 

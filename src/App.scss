@@ -31,22 +31,24 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   color: $strong;
-  background: $accent url("assets/img/Bg.svg") no-repeat top;
-  background-size: 100%;
+  background: url("assets/img/bg--down.svg") no-repeat bottom left fixed,
+              url("assets/img/bg--up.svg") no-repeat top right fixed, $accent;
   min-height: 100vh;
   max-height: max-content;
   font-family: Ubuntu, serif;
 }
+
 .container {
   width: calc(100% - 80px);
   margin: 0 auto;
   max-width: 1440px;
 }
-
-.App__wrapper {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+.App {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -54,5 +56,14 @@ body {
     flex-direction: column;
     align-content: center;
     margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-size: 100vh;
+  }
+  .container {
+    width: calc(100% - 20px);
   }
 }

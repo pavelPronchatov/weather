@@ -1,18 +1,20 @@
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
-import {getWeek, getWeekIsError, getWeekIsLoading} from 'redux/selectors';
+import {getWeek, getWeekIsError, getWeekIsLoading, getWeekMobile} from 'redux/selectors';
 import NoCity from 'components/NoCity';
 import Day from 'components/WeekDays/Day';
 import {changePageThunkAC} from 'redux/thunkActions/weekThunkAction';
 import Loader from 'components/Loader';
+import {useWidthContext} from 'context/resizeContext';
 
 import st from './Days.module.scss';
 
 const Days = () => {
-  const weekData = useSelector(getWeek);
   const dispatch = useDispatch();
   const isLoading = useSelector(getWeekIsLoading);
   const error = useSelector(getWeekIsError);
+  const {isMobile} = useWidthContext();
+  const weekData = isMobile ? useSelector(getWeekMobile) : useSelector(getWeek);
 
   const next = () => dispatch(changePageThunkAC(false));
   const prev = () => dispatch(changePageThunkAC(true));
@@ -32,7 +34,7 @@ const Days = () => {
   }, []);
 
   const generateDays = () => {
-    if (weekData.length) {
+    if (weekData?.length) {
       return (
         <>
           <button className={st.days__prev} onClick={prev}/>

@@ -7,9 +7,10 @@ type SelectProps = {
   selectValues?: Array<CityType>
   setValue: (city: CityType) => void
   value: string
+  className?: string
 }
 
-const Select: React.FC<SelectProps> = ({ selectValues, setValue, value }) => {
+const Select: React.FC<SelectProps> = ({ selectValues, setValue, value, className }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const open = () => setIsOpen(!isOpen);
@@ -23,7 +24,7 @@ const Select: React.FC<SelectProps> = ({ selectValues, setValue, value }) => {
   };
 
   return (
-    <div className={`${st.select} ${isOpenClass()}`}>
+    <div className={`${st.select} ${className} ${isOpenClass()}`}>
       <input
         type="text"
         name="select"

@@ -3,3 +3,7 @@ export type CityType = {
   lat: string
   lon: string
 }
+
+export type breakpoints = {
+  [key: string]: number
+}

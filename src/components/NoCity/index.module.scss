@@ -17,3 +17,12 @@
     margin-bottom: 40px;
   }
 }
+
+@media (max-width: 500px) {
+  .city {
+    &__desc {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

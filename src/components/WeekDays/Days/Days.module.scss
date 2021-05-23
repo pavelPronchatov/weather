@@ -30,3 +30,17 @@
     right: initial;
   }
 }
+
+
+@media (max-width: 500px) {
+  .days {
+    margin-top: 25px;
+    &__list {
+      overflow: auto;
+    }
+    &__prev,
+    &__next {
+      display: none;
+    }
+  }
+}

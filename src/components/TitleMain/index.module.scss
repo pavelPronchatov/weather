@@ -18,3 +18,13 @@
     line-height: 1;
   }
 }
+
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 32px;
+    width: 240px;
+    padding-top: 32px;
+    margin-bottom: 24px;
+  }
+}

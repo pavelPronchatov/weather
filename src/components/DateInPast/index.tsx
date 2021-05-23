@@ -50,8 +50,13 @@ const DateInPast = () => {
           setValue={setCityValue}
           value={cityValue.name}
           selectValues={citiesValues}
+          className={st.past__select}
         />
-        <DatePicker setValue={setDateValue} value={dateValue}/>
+        <DatePicker
+          setValue={setDateValue}
+          value={dateValue}
+          className={st.past__date}
+        />
       </div>
       <div className={st.past__content}>
         {error
