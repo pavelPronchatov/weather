@@ -1,6 +1,6 @@
-export const formatDate = (dt: number): string => {
+export const formatDate = (timeStamp: number): string => {
   const month = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-  const date = new Date(dt * 1000);
+  const date = new Date(timeStamp * 1000);
 
   return `${date.getDate()} ${month[date.getMonth()]} ${date.getFullYear()}`;
 }
